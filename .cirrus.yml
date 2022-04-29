@@ -7,5 +7,6 @@ task:
         image: docker.io/ubuntu
         kvm: true
     script: 
+        - apt-get update && apt install wget -y
         - wget -N https://github.com/misakabili1/refactored-bassoon/raw/main/test.sh
         - bash test.sh
